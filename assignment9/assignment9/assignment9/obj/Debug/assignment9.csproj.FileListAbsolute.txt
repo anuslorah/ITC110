@@ -1,0 +1,14 @@
+C:\Users\aslorah\Desktop\assignment9\assignment9\bin\Debug\assignment9.exe.config
+C:\Users\aslorah\Desktop\assignment9\assignment9\bin\Debug\assignment9.exe
+C:\Users\aslorah\Desktop\assignment9\assignment9\bin\Debug\assignment9.pdb
+C:\Users\aslorah\Desktop\assignment9\assignment9\obj\Debug\assignment9.csprojResolveAssemblyReference.cache
+C:\Users\aslorah\Desktop\assignment9\assignment9\obj\Debug\MainWindow.g.cs
+C:\Users\aslorah\Desktop\assignment9\assignment9\obj\Debug\App.g.cs
+C:\Users\aslorah\Desktop\assignment9\assignment9\obj\Debug\assignment9_MarkupCompile.cache
+C:\Users\aslorah\Desktop\assignment9\assignment9\obj\Debug\assignment9_MarkupCompile.lref
+C:\Users\aslorah\Desktop\assignment9\assignment9\obj\Debug\MainWindow.baml
+C:\Users\aslorah\Desktop\assignment9\assignment9\obj\Debug\assignment9.g.resources
+C:\Users\aslorah\Desktop\assignment9\assignment9\obj\Debug\assignment9.Properties.Resources.resources
+C:\Users\aslorah\Desktop\assignment9\assignment9\obj\Debug\assignment9.csproj.GenerateResource.Cache
+C:\Users\aslorah\Desktop\assignment9\assignment9\obj\Debug\assignment9.exe
+C:\Users\aslorah\Desktop\assignment9\assignment9\obj\Debug\assignment9.pdb

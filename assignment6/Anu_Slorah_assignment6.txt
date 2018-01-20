@@ -1,0 +1,121 @@
+/*Assignment 6
+* Anu Slorah
+* November 3, 2016
+*
+* Create a program that calculates a grade point average divided into the following methods:
+*
+* A method to take the input from the user
+* A method that calculates the GPA and returns a double
+* A display method that calls the input method, and the Calculation and displays the result.
+* The Main method which starts the program and calls the display method
+*/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace GradePointAverage
+{
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            Program p = new Program();
+            p.Display();
+            p.Pause();
+
+        }//main
+
+        private void Display()
+        {
+            Program p = new Program();
+            p.GetGrades();
+            return;
+        }
+        private void GetGrades()
+        {
+            double[] grades; //declaring grade array 
+            double[] credits; //declaring array of credits
+
+            Console.WriteLine("How many grades do you want to list?");
+            int number = int.Parse(Console.ReadLine());
+
+            grades = new double[number];
+            for (int i = 0; i < grades.Length; i++)
+            {
+                Console.WriteLine("Add grade:");
+                grades[i] = double.Parse(Console.ReadLine());
+
+            }
+
+            credits = new double[number];
+            for (int i = 0; i < credits.Length; i++)
+            {
+                Console.WriteLine("Add credits:");
+                credits[i] = double.Parse(Console.ReadLine());
+            }
+
+            ShowGrades(grades, credits);
+            double gpa = CalcGPA(grades, credits);
+            ReturnResult(gpa);
+            return;
+        } //GetGrades
+
+        private double CalcGPA(double[] grades, double[] credits)
+        {
+
+            double totalweight = 0;
+            for (int i = 0; i < grades.Length; i++)
+            {
+                totalweight = totalweight + grades[i] * credits[i];
+            }
+
+            double totalcredits = 0;
+            for (int i = 0; i < credits.Length; i++)
+            {
+                totalcredits += credits[i];
+            }
+
+
+
+            double gpa = totalweight / totalcredits;
+            return gpa;
+        }//Calc
+
+
+        private void ShowGrades(double[] grades, double[] credits)
+        {
+
+            Console.WriteLine("Grades are:");
+            for (int i = 0; i < grades.Length; i++)
+            {
+                Console.Write(grades[i]);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Credits are:");
+            for (int i = 0; i < credits.Length; i++)
+            {
+                Console.Write(credits[i]);
+            }
+            Console.WriteLine();
+
+        }//showGrades
+
+        private void ReturnResult(double gpa)
+        {
+            Console.WriteLine("The gpa is {0}", gpa);
+            Console.ReadKey();
+        }//ReturnResult
+
+
+        private void Pause()
+        {
+            //a method to pause the console long enough to read it
+            Console.WriteLine("Press any key to Exit");
+            Console.ReadKey();
+        }//Pause
+
+    }//class
+}//namespace

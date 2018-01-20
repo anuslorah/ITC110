@@ -1,0 +1,95 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+
+namespace guessing_game
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Program p = new Program();
+            p.QuestionGame();
+         }//main
+        private int QuestionGame() //generates the random number and call the guessing method
+        {
+            Random rand = new Random();
+           
+            int question = rand.Next(1, 501);
+
+            //Console.WriteLine("number is {0}", question); //displays the random number for checking purpose
+            int numberofguesses = CheckAnswer(question);
+            return question;
+        }//QuestionGame
+
+        private int CheckAnswer(int question) //checks if guess == random number
+        {
+            int guess = 0;
+            Console.WriteLine("I am thinking of a number between 1 and 100. Can you guess it?");
+            Console.WriteLine("You have 10 tries. Type your guess!");
+            guess = int.Parse(Console.ReadLine());
+            int numberofguesses = 1;
+
+            
+            while (guess != question && numberofguesses<10)
+            {
+                if (guess < question)
+                { 
+                    Console.WriteLine("Your guess is too low.");
+                }
+                else if (guess > question)
+                {
+                    Console.WriteLine("Your guess is too high.");
+                }
+                Console.WriteLine("You have used {0} tries. Type your guess!", numberofguesses);
+                guess = int.Parse(Console.ReadLine());
+                numberofguesses= numberofguesses+1;
+            }
+            
+            if (guess == question)
+            {
+                Console.WriteLine("You guessed it!");
+                ShowScore(numberofguesses);
+               
+            }
+            else if (guess!= question && numberofguesses == 10)
+            {
+                Console.WriteLine("You used up all your guesses.");
+                Console.WriteLine("Your score is 0.");
+                int score = 0;
+                Pause(score);
+            }
+            return numberofguesses;
+        }//CheckAnswer
+
+        private int ShowScore(int numberofguesses) //shows score
+        {
+            int score = (10 - numberofguesses + 1);
+            Console.WriteLine("Your score is {0}", score);
+            Pause(score);
+            return score;
+        }//ShowScore
+
+        private void Pause(int score) //checks if you want to keep playiong
+        {
+            string continues = "yes";
+            Console.WriteLine("Do you want to play again yes/no ?");
+            continues = Console.ReadLine();
+            continues = continues.ToLower();
+
+            if (continues == "yes")
+            {
+                QuestionGame();
+            }
+            else
+            { 
+            Console.WriteLine("Press any key to Exit");
+            Console.ReadKey();
+            }
+        }//Pause
+
+    }//program
+}//namespace

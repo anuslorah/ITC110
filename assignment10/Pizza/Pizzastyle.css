@@ -1,0 +1,12 @@
+﻿body {
+    background-color: #502860;
+}
+div {
+    background-color: #ffffff;
+    width: 50%;
+    padding: 20px;
+    margin: 0 auto;  
+  }
+h1, h2 {
+    color:#502860;
+}
