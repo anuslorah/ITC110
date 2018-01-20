@@ -1,0 +1,109 @@
+/*****************************************
+*Assignment 1 part 1
+*input: first name, last name, email 
+*output: last name, first name, email
+*Anu Slorah
+*October 3, 2016
+******************************************/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace assignment1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hi, please tell me your first name!");
+            string firstName = Console.ReadLine();
+            Console.WriteLine("Nice to meet you {0}! Please tell me your last name.", firstName);
+            string lastName = Console.ReadLine();
+            Console.WriteLine("I would also like to know your email address.");
+            string email = Console.ReadLine();
+            Console.WriteLine("I have you down as {0}, {1} -- {2}.", lastName, firstName, email);
+            Console.WriteLine("Press any key to end.");
+            Console.ReadKey();
+        }
+    }
+}
+
+/*****************************************
+*Assignment 1 part 2
+*input: name, address, city, state, zip 
+*output: 
+*namw
+*address
+*city, state, zip
+*Anu Slorah
+*October 3, 2016
+******************************************/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace assignment1_2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hi, please tell me your name!");
+            string name = Console.ReadLine();
+            Console.WriteLine("Nice to meet you {0}! Please tell me your address.",name);
+            string address = Console.ReadLine();
+            Console.WriteLine("City?");
+            string city = Console.ReadLine();
+            Console.WriteLine("State?");
+            string state = Console.ReadLine();
+            Console.WriteLine("Zip code?");
+            string zipcode = Console.ReadLine();
+            Console.WriteLine("I have you down as: \r\n {0} \r\n {1} \r\n {2}, {3}, {4}", name, address, city, state, zipcode);
+ 	    Console.WriteLine("Press any key to end.");
+            Console.ReadKey();
+        }
+    }
+}
+
+/*****************************************
+*Assignment 1 part 3
+*input: noun, noun, verb, adjective 
+*output: madlib
+*Anu Slorah
+*October 3, 2016
+******************************************/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace assignment1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Hi, I will generate a madlib. Please tell me a noun.");
+            string noun1 = Console.ReadLine(); //zero
+            Console.WriteLine("One more noun, please.");
+            string noun2 = Console.ReadLine(); //one
+            Console.WriteLine("A verb.");
+            string verb = Console.ReadLine(); //two
+            Console.WriteLine("A color.");
+            string color = Console.ReadLine(); //three
+            Console.WriteLine("A place.");
+            string place = Console.ReadLine(); //four
+            
+
+            Console.WriteLine("Once a {0} went to {1}. He found a {2} {3} and {4} the {5}. The end.", noun1, place, color, noun2, verb, noun2);
+            Console.WriteLine("Press any key to end.");
+
+            Console.ReadKey();
+        } //end of main
+    } //end of class program
+} //end of namespace

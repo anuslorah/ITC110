@@ -1,0 +1,156 @@
+/*Assignment 4_1
+ * Anu Slorah
+ * October 20, 2016
+ * 
+ * 1. Create a for loop that displays 10 random numbers. 
+ * Random is an object that produces a random number. 
+ * Below is a piece of code that produces a random number between 1 and 50:
+ * Random rand = new Random();
+ * rand.Next(1,501);
+ */
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace random
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random rand = new Random();
+           
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine("{0}  ", rand.Next(1, 501));
+                if (i % 5 == 0) Console.WriteLine(" ");
+             }
+
+            Console.WriteLine("Press any key to end.");
+            Console.ReadKey();
+        }//main    
+    }//class
+}//namespace
+
+
+/*Assignment 4_2
+ * Anu Slorah
+ * October 20, 2016
+ *
+ * 2. Create a for loop that counts down (and displays the count) from 10 to 0.
+ */
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace forloop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            for (int i = 10; i >= 0; i--)
+            {
+                Console.WriteLine("Loop {0}  ", i);
+                
+             }
+
+            Console.WriteLine("Press any key to end.");
+            Console.ReadKey();
+        }//main    
+    }//class
+}//namespace
+
+
+
+/*Assignment 4_3
+ * Anu Slorah
+ * October 20, 2016
+ *
+ * 3. Create a while loop that displays the count of the loops
+ * and then asks the user whether they want to continue or not. 
+ * If yes, then continue; if no the program should end 
+ * and display a a note saying thank you.
+ */
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace whileloop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int loopcounter = 1;
+            while (loopcounter >= 1 && loopcounter <= 20)
+            {
+                Console.WriteLine("Loop {0}", loopcounter);
+                Console.WriteLine("Do you want to continue yes/no?");
+                loopcounter++;
+                string yesno = Console.ReadLine();
+                yesno = yesno.ToLower();
+                if (yesno.Equals("no"))
+                {
+                    Console.WriteLine("Thank you");
+                    break;
+                }//if
+                
+            }//while
+
+            Console.WriteLine("Press any key to end.");
+            Console.ReadKey();
+        }//main    
+    }//class
+}//namespace
+
+
+
+/*Assignment 4_4
+ * Anu Slorah
+ * October 20, 2016
+ *
+ *4. Create a do loop that runs until a user enters "Stop."
+ */
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace doloop
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int loopcounter = 1;
+            Console.WriteLine("Write 'stop' at any time to end the loop.");
+            do
+            {
+                Console.WriteLine("Loop {0}", loopcounter);
+                
+                loopcounter++;
+                string stop = Console.ReadLine();
+                stop = stop.ToLower();
+                if (stop.Equals("stop"))
+                {
+                    break;
+                }
+            } while (loopcounter >= 1 && loopcounter <= 20);
+                      
+            Console.WriteLine("Press any key to end.");
+            Console.ReadKey();
+        }//main    
+    }//class
+}//namespace

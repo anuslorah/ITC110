@@ -1,0 +1,157 @@
+/*Assignment 3
+Tax a constant at .092
+input: meal price, tip percentage
+output: meal price, tip, tax, total
+tip can be a decimal or a whole number. 
+If the percent is greater than 1 divide by 100 
+otherwise use the decimal provided.
+Anu Slorah
+October 11, 2016*/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace assignment3
+{
+    static class Constants
+    {
+        public const double tax = 0.092;
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                double mealprice;
+                double tip;
+                double total;
+
+                Console.WriteLine("Please tell the meal price");
+                mealprice = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Please give me a tip percentage");
+                tip = Convert.ToDouble(Console.ReadLine());
+
+                if (tip > 1)
+                {
+                    tip = tip / 100;
+                }
+
+                total = mealprice + (mealprice * tax) + (mealprice * tip);
+                Console.WriteLine("Your meal cost is {0:C}", mealprice);
+                Console.WriteLine("Your tip is {0}", tip);
+                Console.WriteLine("Your have to pay {0:C}", total);
+
+
+                Console.WriteLine("Press any key to end.");
+                Console.ReadKey();
+            }
+        }
+    }
+}
+
+
+
+
+/*Assignment 3_2
+input: number
+output: even output "Even," if odd, "Odd."
+Anu Slorah
+October 11, 2016*/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace assignment3_2
+{
+    static class Constants
+    {
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                int number;
+                Console.WriteLine("Please give me a number");
+                bool goodNumber = int.TryParse(Console.ReadLine(), out number);
+                if (goodNumber == !true)
+                {
+                    Console.WriteLine("Please restart and enter an integer");
+                    Console.WriteLine("Press any key to end.");
+                    Console.ReadKey();
+                    return;         
+                }
+                         
+                if (number % 2 == 0)
+                {
+                    Console.WriteLine("Your number is even");
+                }
+                else
+                {
+                    Console.WriteLine("Your number is odd");
+                }
+                    
+                Console.WriteLine("Press any key to end.");
+                Console.ReadKey();
+            }
+        }
+    }
+}
+
+
+
+
+/*Assignment 3_3
+input: a grade point between 0 and 4
+validate the number is in the correct range
+evaluate the number to assign a letter grade
+output: letter grade based on given table
+Grade Point	Letter Grade
+3.5 to 4	A
+3 to 3.4	B
+2 to 2.9	C
+1 to 1.9	D
+0 to 0..9	F
+Anu Slorah
+October 11, 2016*/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace assignment3_3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double grade;
+            Console.WriteLine("Please enter your grade point");
+            grade = Convert.ToDouble(Console.ReadLine());
+
+            if (grade < 0 || grade > 4)
+            {
+                Console.WriteLine("This is not a valid grade. Please restart.");
+                Console.WriteLine("Press any key to end.");
+                Console.ReadKey();
+                return;
+            }
+            if (grade >= 0 && grade <= 0.9)
+                Console.WriteLine("Your letter grade is F");
+            else if (grade >= 1 && grade <= 1.9)
+                Console.WriteLine("Your letter grade is D");
+            else if (grade >= 2 && grade <= 2.9)
+                Console.WriteLine("Your letter grade is C");
+            else if (grade >= 3 && grade <= 3.4)
+                Console.WriteLine("Your letter grade is B");
+            else if (grade >= 3.5 && grade <= 4)
+                Console.WriteLine("Your letter grade is A");
+
+            Console.WriteLine("Press any key to end.");
+            Console.ReadKey();
+        }
+    }
+}
