@@ -1,0 +1,1 @@
+Have the user enter their user name and password. If the username is customer and the password is P@ssw0rd1, return a message that says "Thank you for logging in." Otherwise return "Invalid user or password."

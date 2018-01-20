@@ -1,0 +1,6 @@
+C:\Users\aslorah\Desktop\classwork_nov15_2\classwork_classes_nov17\classwork_classes_nov17\bin\Debug\classwork_classes_nov17.exe.config
+C:\Users\aslorah\Desktop\classwork_nov15_2\classwork_classes_nov17\classwork_classes_nov17\bin\Debug\classwork_classes_nov17.exe
+C:\Users\aslorah\Desktop\classwork_nov15_2\classwork_classes_nov17\classwork_classes_nov17\bin\Debug\classwork_classes_nov17.pdb
+C:\Users\aslorah\Desktop\classwork_nov15_2\classwork_classes_nov17\classwork_classes_nov17\obj\Debug\classwork_classes_nov17.csprojResolveAssemblyReference.cache
+C:\Users\aslorah\Desktop\classwork_nov15_2\classwork_classes_nov17\classwork_classes_nov17\obj\Debug\classwork_classes_nov17.exe
+C:\Users\aslorah\Desktop\classwork_nov15_2\classwork_classes_nov17\classwork_classes_nov17\obj\Debug\classwork_classes_nov17.pdb

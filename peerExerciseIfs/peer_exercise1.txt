@@ -1,0 +1,41 @@
+/*****************************************
+*Peer exercise 1
+* Kyrrah Nork 
+* Anu Slorah
+*Have the user enter their user name and password. 
+*If the username is customer and the password is P@ssw0rd1,
+* return a message that says "Thank you for logging in." Otherwise return "Invalid user or password."
+*October 6, 2016
+******************************************/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace peer_exercise1
+{
+     class Program
+        {
+            static void Main(string[] args)
+            {
+                
+                Console.WriteLine("Please tell your username");
+                string username = Console.ReadLine();
+
+                Console.WriteLine("Please give me your password");
+                string password = Console.ReadLine();
+
+            if (username.Equals("customer") && password.Equals("P@ssw0rd1"))
+
+                Console.WriteLine("Thank you for logging in.");
+
+            else
+                 Console.WriteLine("Invalid user or password.");
+
+                Console.WriteLine("Press any key to end.");
+                Console.ReadKey();
+            }
+        }
+
+}

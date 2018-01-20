@@ -1,0 +1,44 @@
+/* Arrays
+* Anu Slorah
+* October 25, 2016
+*
+* Create an array of 20 random numbers and output,
+* the highest and the lowest numbers.
+*/
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace array
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random rand = new Random();
+            int[] randArray = new int[20];// declare randArray as an int array of 20
+
+            for (int i = 0; i < 20; i++)
+            {
+
+                randArray[i] = rand.Next(0, 501);
+            }
+
+            Console.WriteLine("[{0}]", string.Join(", ", randArray));
+            Console.WriteLine("Highest number is {0}", randArray.Max());
+            Console.WriteLine("Lowest number is {0}", randArray.Min());
+
+            int[] ascOrderedArray = (from i in randArray orderby i ascending select i).ToArray();
+            Console.WriteLine("[{0}]", string.Join(", ", ascOrderedArray));
+
+            Console.WriteLine("Highest number is {0}", ascOrderedArray[19]);
+            Console.WriteLine("Lowest number is {0}", ascOrderedArray[0]);
+
+            Console.WriteLine("Press any key to end.");
+            Console.ReadKey();
+        }//main    
+    }//class
+}//namespace

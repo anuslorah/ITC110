@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace NorkSlorahPeerExDebugging
+{
+    class Program
+    {
+        const double PI = 3.14;
+
+        static void Main(string[] args)
+        {
+            Program p = new Program();
+            p.GetMeasurements();
+        }
+
+        private double CalculateArea(double radius)
+        {
+            double area = radius * radius * PI;
+            return area;
+        }
+
+        private double CalculateCircumferance(double radius)
+        {
+            double circum = radius * 2 * PI;
+            return circum;
+        }
+
+        private double GetMeasurements()
+        {
+            Console.WriteLine("Enter the radius of the circle");
+            double radius = double.Parse(Console.ReadLine());
+            DisplayMeasurements(radius);
+            return radius;
+        }
+
+        private void DisplayMeasurements(double radius)
+        {
+            double circum = CalculateCircumferance(radius);
+            double area = CalculateArea(radius);
+
+            Console.WriteLine("the circumference is {0}", circum);
+            Console.WriteLine("the area is {0}", area);
+            Console.WriteLine("Press any key to exit");
+            Console.ReadKey();
+        }
+    }
+}
